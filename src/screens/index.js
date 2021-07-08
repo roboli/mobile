@@ -1,4 +1,5 @@
 import React from 'react';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -27,19 +28,28 @@ const TabNavigator = createBottomTabNavigator({
   FeedScreen: {
     screen: FeedStack,
     navigationOptions: {
-      tabBarLabel: 'Feed'
+      tabBarLabel: 'Feed',
+      tabBarIcon: ({ tintColor }) => (
+        <MaterialCommunityIcons name="home" size={24} color={tintColor} />
+      )
     }
   },
   MyNoteScreen: {
     screen: MyStack,
     navigationOptions: {
-      tabBarLabel: 'My Notes'
+      tabBarLabel: 'My Notes',
+      tabBarIcon: ({ tintColor }) => (
+        <MaterialCommunityIcons name="notebook" size={24} color={tintColor} />
+      )
     }
   },
   FavoriteScreen: {
     screen: FavStack,
     navigationOptions: {
-      tabBarLabel: 'Favorites'
+      tabBarLabel: 'Favorites',
+      tabBarIcon: ({ tintColor }) => (
+        <MaterialCommunityIcons name="star" size={24} color={tintColor} />
+      )
     }
   }
 });
