@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Button } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
+import UserForm from '../components/UserForm';
 
 const SignIn = (props) => {
   const storeToken = () => {
@@ -10,7 +11,7 @@ const SignIn = (props) => {
 
   return (
     <View>
-      <Button title="Sign in!" onPress={storeToken} />
+      <UserForm />
     </View>
   );
 };
