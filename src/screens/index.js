@@ -6,6 +6,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import AuthLoading from './authloading';
 import SignIn from './signin';
+import SignUp from './signup';
 import Settings from './settings';
 
 import Feed from './feed';
@@ -14,7 +15,8 @@ import MyNotes from './mynotes';
 import NoteScreen from './note';
 
 const AuthStack = createStackNavigator({
-  SignIn: SignIn
+  SignIn: SignIn,
+  SignUp: SignUp
 });
 
 const SettingsStack = createStackNavigator({
