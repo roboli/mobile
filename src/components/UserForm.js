@@ -42,7 +42,12 @@ const UserForm = (props) => {
   const [ password, setPassword ] = useState();
 
   const handleSubmit = () => {
-    
+    props.action({
+      variables: {
+        email: email,
+        password: password
+      }
+    });
   };
 
   return (
